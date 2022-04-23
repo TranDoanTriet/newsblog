@@ -1,0 +1,136 @@
+@import 'effect';
+
+$purple: #6f42c1;
+$white: #fff;
+$primary: #5a67d8;
+$bg-gray: #F4F4F4;
+$font-li:'Libre Baskerville', serif;
+$font-hind:'Hind', sans-serif;
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.j-center{
+    justify-content: center;
+}
+
+.j-sb{
+    justify-content: space-between;
+}
+
+.a-center{
+    align-items: center;
+}
+body, html, input, button{
+    font-family: 'Rubik', sans-serif;
+}
+
+.round-circle{
+    border: 2px solid #ADA89E;
+    border-radius: 50%;
+}
+
+.tp__title,.ep__title{
+    margin-bottom: 20px;
+    h2{
+        font-size: 28px;
+        font-family: 'Libre Baskerville', serif;
+    }
+}
+.w3{
+    img{
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+    }
+    .w3-info{
+        span,a{
+            display: block;
+            color: $white;
+            font-weight: 500;
+            font-size: 14px;
+            &.up{
+                font-size: 18px;
+                margin-bottom: 3px;
+            }
+            &.date{
+                color: #8380A4;
+                font-family: $font-hind;
+            }
+        }
+    }
+}
+.featured-m{
+    color: $primary;
+    display: inline-block;
+    background-color: #EDEDF3;
+    padding:10px 20px;
+    border-radius: 20px;
+    
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    @include hover-color($purple);
+}
+
+.item{
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    @include hover;
+    .item__content{
+        margin: 25px;
+        .tag-title{
+            a{
+                @include tag-title;
+            }
+        }
+    }
+}
+.category{
+    .item{
+        background-color: $white;
+        .item__content{
+            .tag-title{
+                @include hover-a;
+            }
+            a{
+                color: #333;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+.none-border{
+    border: none;
+}
+.restyle{
+    font-family: $font-hind;
+    font-size: 16px;
+}
+
+.btn-view{
+    @include hover-background($primary);
+    @include hover-color($white);
+}
+.logo{
+    .logo__link{
+        color: #333;
+        font-size: 24px;
+        font-weight: 600;
+        font-family: $font-hind;
+        letter-spacing: 1px;
+        i{
+            color: $primary;
+            margin-right: 5px;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@mixin hover {
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 3px 10px rgba(#333,0.2);
+    }
+}
+@mixin position-t0-l0 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@mixin tag-title {
+    color: $white;
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: block;
+    font-family: $font-hind;
+}
+@mixin hover-color($color) {
+    &:hover{
+        color: $color;
+    }
+}
+@mixin hover-background($color) {
+    &:hover{
+        background-color: $color;
+    }
+}
+@mixin hover-a {
+    &:hover a{
+        color: $primary;
+    }
+}
+
+@mixin move-up-tag {
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 2px 10px rgba(#333,0.1);
+    }
+}
+
+@mixin btn-view {
+    @include hover-background($primary);
+    @include hover-color($white);
+}
